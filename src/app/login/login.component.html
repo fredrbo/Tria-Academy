@@ -1,0 +1,69 @@
+<div class="container ">
+  <div class="bg row justify-content-center">
+    <div class="col-11 col-sm-8 col-md-6 col-xl-4 mt-32 bgLogin">
+      <div class="row justify-content-end ">
+        <div class="col-3  pt-2 ">
+
+          <button class="language mr-2" (click)="selectLanguage('en-us')"
+            [ngClass]="{'language-selected' : this.language == 'en-us'}">
+            <img src="../assets/login/en-us.png">en-us
+          </button>
+
+          <button class="language" (click)="selectLanguage('pt-br')"
+            [ngClass]="{'language-selected' : this.language == 'pt-br'}">
+            <img src="../assets/login/pt-br.png">pt-br
+          </button>
+
+        </div>
+      </div>
+
+      <div class="row justify-content-center logo">
+        <img src="../assets/login/logo-login.png" class="w-48">
+      </div>
+
+      <div class="form-group">
+        <form [formGroup]="form">
+          <div class="row pl-4">
+            <label class="mb-2" style="color: #005399; font-weight: 600">Login</label><br>
+            <label class="text-sm my-1">E-mail</label><br>
+            <div class="row col-11 ml-0">
+              <input [ngClass]="{'login-error' :onSubmit()}" class="-inp-primary-txt" formControlName="email" ngModel
+                placeholder="Insira seu e-mail">
+            </div>
+
+            <label class="text-sm mt-4 mb-1">Senha</label>
+            <div class="control has-icons-right row  col-11  ml-0">
+              <input [ngClass]="{'login-error' :onSubmit()}" class="-inp-primary-txt " formControlName="pwd" ngModel
+                placeholder="Insira sua senha" type="password">
+
+                <button  class="text-gray-400 icon is-medium is-right  p-4" >
+                  <i (click)="changeHidden()" *ngIf="this.pwdHidden" class="fa fa-eye  mr-2 mb-2" aria-hidden="true"></i>
+                  <i (click)="changeHidden()" *ngIf="!this.pwdHidden" class="fa fa-eye-slash mr-2 mb-2" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="row justify-content-end pr-0">
+              <div class="col-4 ml-6  ">
+                <a class="forgot-pwd" [routerLink]="['recoverPwd']">Esqueci a senha</a>
+              </div>
+            </div>
+
+            <div class="row justify-content-center ">
+              <div class="col-6 col-md-6 ml-6">
+                <span class="lbl-error" *ngIf="onSubmit()">
+                  Login ou senha incorretos
+                </span>
+              </div>
+            </div>
+
+            <div class="row px-4 pb-2 my-3">
+              <button (click)="onSubmit()" type="submit" [routerLink]="['/dashboard']"
+                class="-btn-primary h-9">Entrar</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

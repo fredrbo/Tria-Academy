@@ -1,0 +1,171 @@
+.title{
+  font-size: 23px;
+}
+.subtitle{
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.bg-files{
+  background-color: #ffffff;
+  border-radius: 14.4444px 14.4444px 7.22222px 7.22222px;
+  box-shadow: 0px 5px 8px 2px rgba(150, 150, 150, 0.25);
+}
+
+.filter{
+  width: 100%;
+  border-radius: 14px;
+  padding-right: 40%;
+}
+
+.filter::placeholder{
+  font-size: 12px;
+}
+
+.add{
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+}
+
+
+/* Table */
+thead{
+  background-color: #F8F8F8;
+  font-size: 13px;
+}
+
+th {
+  font-weight: 500;
+}
+
+td {
+  font-size: 12px;
+
+}
+th,td{
+  padding: 10px 12px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.lbl{
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #ffffff
+}
+
+.upload{
+  background-color: #F1F1F1;
+  color: #577AD3;
+  border-radius: 11.7361px;
+  padding: 4px 5.5rem 4px 10px;
+  font-size: 12px;
+}
+
+.upload > span {
+  color: #9E9E9E ;
+  margin: -2px 10px;
+}
+.upload:hover{
+  background: #dad8d8;
+}
+
+.fileName{
+  cursor: pointer;
+}
+/* Fim table */
+
+/* Rodapé */
+.arrow{
+  padding: 0px 5px;
+  margin: 6px 3px;
+  background-color: #F58E16;
+  border-radius: 30%;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 900;
+ }
+
+ .arrow:hover{
+   background-color: #d47a13;
+ }
+
+ .numbe{
+   color: #80809C;
+   font-family: Poppins;
+   margin: auto 8px
+ }
+
+ .numbe:focus, .numbe:focus{
+   color: #F58E16;
+ }
+
+ .-footer{
+
+   font-size: 13px;
+   font-weight: 300;
+   color: #80809c;
+   font-family: Jost;
+ }
+ /*Fim do  Rodapé */
+
+ @media screen and (max-width:798px)	{
+
+  .lbl{
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+
+  thead{
+    font-size: 12px;
+  }
+
+  .upload{
+
+    padding: 4px 2rem 4px 11px;
+    font-size: 11px;
+  }
+
+  .extension{
+    display: none;
+  }
+
+  th,td{
+    padding: 10px 6px;
+  }
+
+  .filter::placeholder{
+    width: 125%;
+  }
+
+}
+
+@media screen and (max-width:768px)	{
+
+  .filter::placeholder{
+    width: 120%;
+  }
+
+  .add i, .add > button{
+  font-size: 11px
+  }
+
+  .-footer{
+    font-size: 11px;
+  }
+
+ .img {
+    display: none;
+  }
+  .email{
+    word-break: break-all;
+  }
+}
+
+/* Large (LG)  */
+@media screen and (min-width:993px) and (max-width:1200px){
+  .numbe{
+    padding: 0px;
+  }
+}

@@ -1,0 +1,86 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-12 navigation mt-5">
+      <a [routerLink]="['/users']">Usuários</a>>
+      <span class="font-semibold">Cadastrar usuário</span>
+    </div>
+  </div>
+
+  <div class="row title my-3">
+    <label class="font-semibold">Cadastrar usuário</label>
+    <span class="subtitle mb-2">Realize o cadastro de um usuário no sistema</span>
+  </div>
+
+  <div class="container bg-container">
+    <span class="subtitle mt-5  font-medium">Dados do usuário</span>
+
+    <form [formGroup]="form">
+      <div class="row mt-5">
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+          <label class="label-input"> Nome:</label>
+          <input class="-inp-primary-txt " formControlName="name" placeholder="Insira o nome do usuário">
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+          <label class="label-input"> E-mail:</label>
+          <input class="-inp-primary-txt " formControlName="email" placeholder="Insira o e-mail do usuário">
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+          <label class="label-input"> Telefone:</label>
+          <input type="number" class="-inp-primary-txt" formControlName="phone" placeholder="Insira o telefone do usuário">
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+          <label class="label-input"> Empresa:</label>
+          <input class="-inp-primary-txt " formControlName="company"
+            placeholder="Insira o nome da empresa de trabalho usuário">
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+          <label class="label-input"> Permissão:</label>
+          <select class="-select ml-1" formControlName="permit">
+            <option value="" selected hidden>Selecione o tipo de permissão do usuário</option>
+            <option>Administrador</option>
+            <option>Outros</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <label class="subtitle font-medium ml-2">Foto de perfil</label>
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+          <label class="label-input-img ml-2" [ngClass]="{'img-upload':  isLoad == true}">
+            <span>
+              {{text}}
+            </span>
+            <input class="-inp-primary-txt" (change)="load($event)" formControlName="img" type="file" accept="image/*">
+          </label>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4 mt-5 ">
+          <div class="photo">
+            <img [src]="imgPath">
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+          <button class="ml-2 -btn-primary py-2" [routerLink]="['/users']">Salvar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

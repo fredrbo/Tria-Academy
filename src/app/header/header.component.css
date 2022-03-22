@@ -1,0 +1,126 @@
+.container-fluid{
+  height: 60px;
+}
+
+.logo{
+  margin-left: 20px;
+  height: 30px;
+  width: 60px;
+}
+
+.menu{
+  color: #999999;
+  height: max-content;
+  margin: 0px 10px;
+  padding: 8px 7px 4px 6px;
+
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.menu:focus, .menu:hover, .active{
+  color: #F26925;
+  background-color: rgb(242, 105,37,0.11);
+  box-shadow: 0px 2px #F26925;
+
+}
+.userIcon{
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid #04599C;
+}
+
+.userIcon > label{
+  color: #04599C
+}
+
+.exit{
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+}
+
+.drop{
+
+  padding: 10px;
+}
+
+.drop >label, .drop > i{
+  color: #B0B0B0;
+}
+
+.drop  > i > label {
+  font-size: 14px;
+}
+
+/* -------------- Querys ---------------------------- */
+
+
+
+
+@media screen and (max-width:576px){
+
+  .logo{
+    margin-left: 0px;
+  }
+
+  .menu{
+    padding: 10px 0px 4px 0px;
+  }
+  .menu i {
+    font-size: 13px;
+  }
+
+  .menu p{
+    font-size: 14px;
+  }
+  .userName{
+    display: none;
+
+  }
+  .userIcon{
+    margin-left: 5px;
+  }
+
+}
+
+ @media screen and (min-width:576px) and (max-width:768px)
+{
+
+  .logo{
+    margin-left: 5px;
+    width: 65%;
+  }
+  .menu{
+    padding: 6px 3px;
+
+  }
+
+  .menu p{
+    font-size: 0.9rem ;
+  }
+  .menu i {
+    font-size: 14px;
+  }
+
+  .userName{
+    display: none;
+  }
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:992px){
+
+  .menu{
+    padding: 6px 3px;
+  }
+
+  .drop{
+    margin-left: 1rem;
+  }
+}

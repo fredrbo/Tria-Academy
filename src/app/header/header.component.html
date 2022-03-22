@@ -1,0 +1,34 @@
+ <div *ngIf="verifyLogin()" class="container-fluid bg-white">
+  <div class="row">
+    <div class="col-2 col-sm-2 col-md-1 mt-4">
+      <a [routerLink]="['/login']"><img src="../../assets/header/logo-vr.png" class="logo"></a>
+    </div>
+    <div class="offset-1 col-7 offset-sm-2 col-sm-6  offset-md-3 col-md-5  col-xl-4 nav">
+
+      <button class="menu"  [routerLink]="['/users']"  routerLinkActive="active">
+        <i class="fa-solid fa-user-group user "></i>
+        <p>Usuário</p>
+      </button>
+
+      <button class="menu" [routerLink]="['/dashboard']" routerLinkActive="active" >
+        <i class="fa fa-clock-o fa-flip-horizontal w-8"></i>
+        <p>Dashboard</p>
+      </button>
+
+      <button class="menu" [routerLink]="['/file']"  routerLinkActive="active">
+          <i class="fa fa-file-o" aria-hidden="true"></i>
+          <p>Arquivos</p>
+        </button>
+        </div>
+
+        <div class=" col-2 col-sm-2  col-md-3 col-xl-2  offset-xl-2 exit">
+          <button class="drop mt-1">
+            <i class="userIcon "><label>{{user.name[0] + user.lastName[0]}}</label></i>
+            <label class="ml-2 userName">
+              {{user.name + ' ' + user.lastName}}
+            </label>
+            <i class="fa-solid fa-angle-down ml-1"></i>
+          </button>
+        </div>
+    </div>
+  </div>

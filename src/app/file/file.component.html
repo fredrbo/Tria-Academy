@@ -1,0 +1,80 @@
+<div class="container">
+
+  <div class="row my-4">
+    <div class="col">
+      <label class="title blue-title">Arquivos</label>
+      <span class="subtitle blue-title">Lista de arquivos cadastrados no sistema.</span>
+    </div>
+  </div>
+
+  <div class="row bg-files justify-content-between">
+
+    <div class="col-6 col-sm-5 col-md-4 col-xl-3 my-2">
+      <div class="control has-icons-right ">
+        <input class="-inp-primary-txt filter ml-2" placeholder="estou buscando por...">
+        <span class="icon is-small is-right ">
+          <i class="fa fa-search mb-2 " aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-3 my-2 add">
+      <button class=" -btn-secondary" [routerLink]="['new-file']">
+        Adicionar<i class="bi bi-plus-circle ml-1"></i>
+      </button>
+    </div>
+
+    <div class="row ml-0 px-1">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-2 ">Nome</th>
+            <th class="col-2 ">Data de Modificação</th>
+            <th class="col-1 extension">Extensão</th>
+            <th class="col-4 ">Tags</th>
+            <th class="col-3 ">Arquivo</th>
+            <th class="col-1 "></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let file of files">
+          <tr>
+            <td class="pt-3 break"> {{file.name}}</td>
+            <td class="pt-3"> {{file.date}}</td>
+            <td class="pt-3 extension"> {{file.extension}}</td>
+            <td class="pt-3">
+              <label class="lbl ml-2 mt-1" [ngStyle]="{backgroundColor: getCor(tag.id)}"
+                *ngFor="let tag of file.tags; let t = index"> {{file.tags[t].label}}
+              </label>
+            </td>
+            <td>
+              <button class="upload control has-icons-right">
+                <label class="fileName">{{file.fileName}}</label>
+                <span class="icon is-small is-right ">
+                  <i class="bi bi-box-arrow-in-down ml-4"></i>
+                </span>
+              </button>
+            </td>
+            <td class="pt-4"><button><i class="fa-solid fa-ellipsis-vertical"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <div class="col-5 col mt-2">
+        <span class="-footer ml-3">
+          Exibindo 6 de 46 produtos</span>
+      </div>
+      <div class="col-7 col-sm-6 col-md-4 col-lg-4 my-1 ">
+        <button class="arrow"><i class="fa-solid fa-angles-left"></i></button>
+        <button class="arrow px-2"><i class="fa-solid fa-angle-left "></i></button>
+        <button class="numbe">1</button>
+        <button class="numbe">2</button>
+        <button class="numbe">3</button>
+        <button class="numbe">4</button>
+        <button class="arrow px-2"><i class="fa-solid fa-angle-right"></i></button>
+        <button class="arrow"><i class="fa-solid fa-angles-right"></i></button>
+      </div>
+    </div>
+  </div>
+</div>

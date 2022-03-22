@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row title my-4">
+
+    <div class="col-12">
+      <label>Usuários</label>
+      <span class="subtitle mt-1">Registro de usuários cadastrados no sistema</span>
+    </div>
+  </div>
+
+  <div class="row bg-users justify-content-between">
+    <div class="col-6 col-sm-5 col-md-4 col-xl-3 my-2">
+
+      <div class="control has-icons-right ">
+        <input class="-inp-primary-txt filter ml-2" placeholder="estou buscando por...">
+        <span class="icon is-small is-right ">
+          <i class="fa fa-search mb-2 " aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-3 my-2 add">
+      <button class=" -btn-secondary" [routerLink]="['register']">
+        Adicionar
+        <i class="bi bi-plus-circle ml-1"></i>
+      </button>
+    </div>
+
+    <div class="row ml-0 px-1">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-1 img"></th>
+            <th class="col-2 ">Nome</th>
+            <th class="col-2 ">Email</th>
+            <th class="col-2 ">Telefone</th>
+            <th class="col-2 ">Empresa</th>
+            <th class="col-2 ">Permissão</th>
+            <th class="col-1 "></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let user of users">
+          <tr>
+            <td class="img"><img class="ml-3" src="{{user.imgPath}}" /></td>
+            <td class="col-1">{{user.name}}</td>
+            <td class="col-1 email">{{user.email}}</td>
+            <td class="col-1">{{user.phone}}</td>
+            <td class="col-1">{{user.company}}</td>
+            <td class="col-1">{{user.permit}}</td>
+            <td><button><i class="fa-solid fa-ellipsis-vertical "></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <div class="col-5 col mt-2">
+        <span class="-footer ml-3">
+          Exibindo 10 de 46 produtos</span>
+      </div>
+
+      <div class="col-7 col-sm-6 col-md-4 col-lg-4 my-1 ">
+        <button class="arrow"><i class="fa-solid fa-angles-left"></i></button>
+        <button class="arrow px-2"><i class="fa-solid fa-angle-left "></i></button>
+        <button class="numbe">1</button>
+        <button class="numbe">2</button>
+        <button class="numbe">3</button>
+        <button class="numbe">4</button>
+        <button class="arrow px-2"><i class="fa-solid fa-angle-right"></i></button>
+        <button class="arrow"><i class="fa-solid fa-angles-right"></i></button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- <app-snackbar></app-snackbar> -->

@@ -1,0 +1,13 @@
+
+.bgLogin{
+  border-radius: 10px;
+  min-height: 25rem ;
+  max-height: 30rem ;
+}
+
+.language{
+  font-size: 10px;
+  max-width: 30px;
+  max-height: 90px;
+  margin-top: 5px;
+}

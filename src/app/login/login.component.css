@@ -1,0 +1,54 @@
+.bgLogin {
+    border: 0.890937px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 26.7281px;
+    background-color:#ffffff;
+}
+.language-selected{
+  filter: grayscale(100%);
+}
+
+.language {
+    font-size: 10px;
+    max-width: 30px;
+    max-height: 90px;
+    margin-top: 5px;
+}
+
+
+.forgot-pwd{
+ color: #00428B;
+ font-size: 11px;
+ text-align: center;
+ justify-content: flex-end;
+}
+
+.lbl-error{
+  color: #E74C3C;
+  font-size: 11px;
+}
+
+.login-error{
+  color: #E74C3C;
+  border:1px solid #E74C3C;
+}
+
+
+input{
+  z-index: 0;
+}
+
+i{
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .language{
+    font-size: 9px;
+    max-width: 28px;
+    max-height: 80px;
+  }
+
+}

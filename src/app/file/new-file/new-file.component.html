@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 navigation mt-5">
+      <a [routerLink]="['/file']">Arquivos</a>>
+      <span class="font-semibold">Cadastro de arquivo</span>
+    </div>
+  </div>
+
+  <div class="row title my-3">
+    <label class="font-semibold">Cadastro de arquivo</label>
+    <span class="subtitle mb-2">Realize o cadastro de arquivos no sistema.</span>
+  </div>
+
+  <div class="container bg-container ">
+    <div class="row">
+      <div class="col-md-6 ">
+        <span class="subtitle mt-5 ml-2 font-medium">Dados do arquivo</span>
+        <form [formGroup]="form">
+
+          <div class="row mt-5">
+            <div class="col-10 col-sm-8 col-md-9 col-xl-8">
+              <label class="label-input"> Nome:</label>
+              <input class="-inp-primary-txt " formControlName="name" placeholder="Insira o nome do arquivo">
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-10 col-sm-8 col-md-9 col-xl-8">
+              <label class="label-input"> Descrição:</label>
+              <input class="-inp-primary-txt " formControlName="description" placeholder="Insira a descrição do arquivo">
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-10 col-sm-8 col-md-9 col-xl-8">
+              <label class="label-input"> Extensão:</label>
+              <select class="-select ml-2"  formControlName="extension">
+                <option value="" selected hidden>Selecione o tipo de permissão do arquivo</option>
+                <option >PDF</option>
+                <option >DOCX</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <label class="subtitle font-medium ml-2">Carreagmento do arquivo</label>
+            <div class="col-10 col-sm-8 col-md-9 col-xl-8">
+              <label class="label-input"> Arquivo:</label>
+              <label class="label-input-img ml-2"  [ngClass]="{'upload':  isFileLoad == true}">
+                {{filePath}}
+                <input class="-inp-primary-txt" formControlName="file" (change)="loadFile(form.value.file)"
+                 type="file" accept=".docx , .pdf">
+              </label>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-10 col-sm-8 col-md-9 col-xl-8">
+              <label class="label-input"> Capa:</label>
+              <label class="label-input-img ml-2" [ngClass]="{'upload':  isCoverLoad == true}">
+                <span>{{coverPath}}</span>
+                <input class="-inp-primary-txt" formControlName="cover" (change)="loadCover($event, form.value.cover)"
+                 type="file" accept="image/*">
+              </label>
+            </div>
+          </div>
+
+          <div class="row mt-5 justify-content-start">
+            <div class="col-10 col-sm-8 col-md-9 col-xl-8">
+              <button  class=" ml-3 mt-4 -btn-primary py-2" [routerLink]="['/file']">Salvar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-2 col-10 col-sm-7 col-md-4 col-xl-4 photo">
+        <img [src]="loadingPath" >
+      </div>
+
+    </div>
+  </div>
+</div>

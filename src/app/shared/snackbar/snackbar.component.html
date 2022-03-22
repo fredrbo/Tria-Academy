@@ -1,0 +1,11 @@
+<button (click)="toggleSnack()" >toggle</button>
+
+<div class="container ">
+  <div class="row justify-content-center">
+    <div class="snackbar col-6" [@snack-visiblity]="snackVisiblity">
+      <span>
+        {{message}}
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+
+.title{
+  font-size: 23px;
+  display: block;
+}
+.subtitle{
+  font-size: 13px;
+  display: block;
+}
+
+.filter-label{
+  font-size: 12px;
+}
+input[type=date]{
+  display: none;
+  border: 1px solid #b0b0b0;
+  border-radius: 6px;
+}
+
+
+
+.-input{
+  position: relative;
+}
+
+.-input > label{
+  color: #1A1943;
+  width: 60px;
+  background-color: #fff;
+  top: -10px;
+  left: 24px;
+  font-size: 12px;
+  position: absolute;
+  float: center;
+}

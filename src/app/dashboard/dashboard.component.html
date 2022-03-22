@@ -1,0 +1,101 @@
+<div class="container pb-4">
+  <div class="row title my-4">
+    <div class=" col-12">
+      <label class="blue-title">Dashboard</label>
+      <span class="subtitle blue-title mt-1">Visualize as informações de forma dinâmica.</span>
+    </div>
+  </div>
+
+  <!-- cards -->
+  <div class="row justify-content-between">
+    <div class="my-2  col-2 col-md-2 -bg-info">
+      <span class="numbe">45</span>
+      <span class="sub">Arquivos</span>
+    </div>
+
+    <div class="my-2 col-2 col-md-2 -bg-info">
+      <span class="numbe">332</span>
+      <span class="sub">Usuários</span>
+    </div>
+
+    <div class="my-2 col-2 col-md-2 -bg-info">
+      <span class="numbe">168<span class="hours">/horas</span></span>
+      <span class="sub">Tempo de de acesso</span>
+    </div>
+
+    <div class="my-2 col-2 col-md-2 -bg-info">
+      <span class="numbe">245</span>
+      <span class="sub">logins</span>
+    </div>
+
+    <div class="my-2 col-2 col-md-2 -bg-info">
+      <span class="numbe">404</span>
+      <span class="sub">Downloads</span>
+    </div>
+
+  </div>
+  <!-- fim cards -->
+
+  <!-- Gráficos -->
+  <div class="row mt-3 mb-1">
+    <div class=" col-md-6 bg-graph ">
+
+      <div class="row mt-4 ml-1 justify-content-between">
+        <div class="col-3 mb-3">
+          <span class="blue-title font-semibold	">
+            Número de acessos
+          </span>
+        </div>
+
+        <div class="col-2 -filter ">
+          <button (click)="openFilter()">
+            Filtros <i class="bi bi-funnel"></i>
+          </button>
+
+        </div>
+        <canvas #numberAccess height="270"></canvas>
+      </div>
+    </div>
+
+    <div class="col-md-6 my-2  bg-graph ">
+      <div class="row mt-3 ml-1 justify-content-between">
+        <div class="col-6 mb-3">
+          <span class="blue-title font-semibold	">
+            Tempo de acessos
+          </span>
+        </div>
+
+        <div class="col-2 -filter ">
+          <button (click)="openFilter()">
+            Filtros <i class="bi bi-funnel"></i>
+          </button>
+        </div>
+          <canvas  #timeAccess height="270" ></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class=" bg-graph-big">
+      <div class="row mt-3  ml-1 justify-content-between">
+        <div class="col-4  mb-3">
+          <span class="blue-title font-semibold	">
+            Download dos Arquivos
+          </span>
+        </div>
+
+        <div class="col-2 col-md-1 -filter ">
+          <button (click)="openFilter()">
+            Filtros <i class="bi bi-funnel"></i>
+          </button>
+        </div>
+
+        <canvas  #download height="270"></canvas>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

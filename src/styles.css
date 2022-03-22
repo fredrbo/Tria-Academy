@@ -1,0 +1,123 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {background-color: #E5E5E5;}
+
+html,
+body {
+  min-height: 100vh;
+  max-height: 250vh;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: local("Jost"), url(./assets/fonts/Jost-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(./assets/fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+* {
+    font-family: "Segoe UI";
+}
+
+.blue-title{
+  color: #01599F;
+}
+/* Buttons */
+.-btn-primary {
+    background-color: #04589C;
+    font-weight: 600;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+
+.-btn-primary:hover {
+    background-color: #3679B0;
+}
+
+.-btn-primary:active {
+    background-color: #F38E16;
+}
+
+.-btn-primary:disabled {
+  color: #B2B2B2;
+  background-color: #E6E6E6;
+}
+
+
+.-btn-secondary{
+  padding: 4px 10px;
+  background-color: #04589B;
+  color: #fafafa;
+  border-radius: 11px;
+  font-family: Jost;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.-btn-secondary:active {
+    background-color: #F38E16;
+}
+
+.-btn-secondary:hover {
+  background-color: #3679B0;
+}
+/* Inputs */
+.-inp-primary-txt{
+  background-color: #FFFFFF;
+  border:1px solid #BDCCD4;
+  border-radius: 4px;
+  padding: 5px 0px 5px 15px ;
+  font-size: 12px;
+  line-height: 1.25rem
+}
+
+.-inp-primary-txt::placeholder{
+  color: transparent;
+  font-size: 12px;
+  line-height: 1.25rem;
+  color: #B0B0B0;
+}
+.-inp-primary-txt:focus{
+  font-weight: normal;
+  outline: 0px;
+  border:1px solid #000;
+}
+
+.-inp-primary-txt:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+/* inicio select */
+.-select{
+  font-size: 12px;;
+  color: #b0b0b0;
+  background-color: #FFFFFF;
+  border:1px solid #BDCCD4;
+  border-radius: 4px;
+  padding: 6px 0px 6px 15px ;
+}
+
+.-select:hover{
+  border: 1px solid #000;
+}
+/* fim select */
+
+/* InicioFilter */
+.-filter{
+  color: #F16A24;
+}
+
+.-filter:hover{
+  color:rgba(241, 106, 36, 0.8);
+}
+
+.-filter:active{
+  color: #F38E16;
+}
+
+/* fim Filter */
