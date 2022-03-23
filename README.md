@@ -1,27 +1,29 @@
-# Vrtua
+# Desafio Final Tria Softaware
+Desagio final do estágio proposto pela Tria Softawe, o desafio consiste em transformar o protótipo que está no [figma](https://www.figma.com/proto/AGnHpyZSUFZueFL5XjgZsD/Formula-XR?node-id=165%3A350&starting-point-node-id=165%3A350) em código, utilizando o framework Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+## 💻 Projeto
 
-## Development server
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge"/>
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 🚀 Tecnologias usadas
 
-## Code scaffolding
+- [Angular CLI 12.2](https://angular.io/guide/what-is-angular)
+- [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+- [TailwindCSS](https://tailwindcss.com/docs/installation)
+- [Bulma.io](https://bulma.io/documentation/overview/start/)
+- [Chart.js](https://www.chartjs.org/docs/latest/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Como instalar
 
-## Build
+- Baixe ou clone este repositório usando `https://github.com/fredrbo/Tria-Academy.git`;
+- Dentro do diretório, instale as dependências usando `npm install`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como executar
 
-## Running unit tests
+Execute `ng serve` na pasta vrtua para executar a versão de desenvolvimento. Depois acesse `http://localhost:4200/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Como compilar/construir
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Execute `ng build` para buildar o projeto
